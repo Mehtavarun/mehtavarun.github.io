@@ -9,20 +9,17 @@
     <div id="root">
         <div class="container">
             <div class="headingsContainer">
-                <div class="headingBox">
+                <div class="headingBox" onclick="headingTabClick(this)">
                     <div class="headingText activeHeading">about me</div>
                 </div>
-                <div class="headingBox">
+                <div class="headingBox" onclick="headingTabClick(this)">
                     <div class="headingText">skills</div>
                 </div>
-                <div class="headingBox">
+                <div class="headingBox" onclick="headingTabClick(this)">
                     <div class="headingText">experience</div>
                 </div>
-                <div class="headingBox">
+                <div class="headingBox" onclick="headingTabClick(this)">
                     <div class="headingText">projects</div>
-                </div>
-                <div class="headingBox">
-                    <div class="headingText">education</div>
                 </div>
             </div>
             <div class="imageContainer">
@@ -59,83 +56,114 @@
                                     <td class="informationTableData" id="locationData">Gurgaon, India</td>
                                 </tr>
                                 <tr class="informationTableRow">
-                                    <th class="informationTableHeading" id="emailHead">Email</th>
-                                    <td class="informationTableData" id="emailData">mvarun96@gmail.com</td>
+                                    <th class="informationTableHeading" id="fullNameHead">College</th>
+                                    <td class="informationTableData" id="fullNameData">Panjab University, UIET Hoshiarpur</td>
                                 </tr>
                             </table>
                         </div>
                         <div class="skillBox">
-                            <div class="skillNumbers">66%</div>
-                            <div class="skillName">English</div>
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="70" cy="70" r="40"></circle>
+                                    <circle cx="70" cy="70" r="40"></circle>
+                                </svg>
+                                <div class="skillNumbers"><h2>8.58</h2></div>
+                            </div>
+                            <div class="skillName">CGPA</div>
                         </div>
                     </div>
                 </div>
                 <div id="skillsBlock" style="display: none;">
                     <div class="aboutMeHeading">
-                        Skills
+                        skills
                     </div>
-                    <div class="aboutMeContent">
+                    <div class="skillsContent">
                         <div class="devSkillsContentBlock">
                             <div class="backendSkills">
-                            <div class="activeInformationHeading">Backend Skills</div>
+                                <div class="activeInformationHeading">BACKEND SKILLS</div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">Node.Js</div>
-                                        <div class="skillProgressData">68%</div>
+                                        <div class="skillProgressData">65%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="nodejs"></div>
+                                    </div>
                                 </div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">Java</div>
                                         <div class="skillProgressData">60%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="java"></div>
+                                    </div>
                                 </div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">MongoDB</div>
                                         <div class="skillProgressData">50%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="mongodb"></div>
+                                    </div>
                                 </div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">SQL</div>
                                         <div class="skillProgressData">60%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="sql"></div>
+                                    </div>
                                 </div>
                             </div>
+                        </br >
                             <div class="frontendSkills">
-                            <div class="activeInformationHeading">Frontend Skills</div>                            
+                                <div class="activeInformationHeading">FRONTEND SKILLS</div>                            
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">React.Js</div>
-                                        <div class="skillProgressData">64%</div>
+                                        <div class="skillProgressData">65%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="reactjs"></div>
+                                    </div>
                                 </div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">Angular</div>
                                         <div class="skillProgressData">45%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="angular"></div>
+                                    </div>
                                 </div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">HTML5</div>
                                         <div class="skillProgressData">70%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="html"></div>
+                                    </div>
                                 </div>
                                 <div class="skillInformation">
                                     <div class="skillText">
                                         <div class="skillName">CSS3</div>
-                                        <div class="skillProgressData">40%</div>
+                                        <div class="skillProgressData">50%</div>
                                     </div>
-                                    <div class="skillProgressBarNodejs"></div>
+                                    <div class="skillProgressBar">
+                                        <div class="progressBar"></div>
+                                        <div class="css"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -143,30 +171,108 @@
                 </div>
                 <div id="experienceBlock" style="display: none;">
                     <div class="aboutMeHeading">
-                        about me
+                        experience
                     </div>
-                    <div class="aboutMeContent">
-                        about me
+                    <div class="experienceContent">
+                        <div class="experienceDetails">
+                            <div class="companyName">Nagarro Softwares Pvt. Ltd.</div>
+                            <div class="designationAndWorkPeriod">
+                                <div class="designation">Junior Associate</div>
+                                <div class="workPeriod">April, 2019 - Present</div>
+                            </div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Working as a Backend Developer in a Client based project.</li>
+                                    <li class="workDetailsData">Working in JAVA, SQL, Spring, Hibernate.</li>
+                                    <li class="workDetailsData">Following Agile Methodology.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experienceDetails">
+                            <div class="companyName">Trioncube Softwares Pvt. Ltd.</div>
+                            <div class="designationAndWorkPeriod">
+                                <div class="designation">Frontend Developer Intern</div>
+                                <div class="workPeriod">January 2019 – April 2019</div>
+                            </div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Worked as a Developer on a product from scratch.</li>
+                                    <li class="workDetailsData">Worked on developing Frontend in React/Redux, ES6.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experienceDetails">
+                            <div class="companyName">Second Innings Pvt. Ltd.</div>
+                            <div class="designationAndWorkPeriod">
+                                <div class="designation">Software Developer Intern</div>
+                                <div class="workPeriod">June 2018 – July 2018</div>
+                            </div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Worked on a product from scratch.</li>
+                                    <li class="workDetailsData">Created APIs with Node.JS, Expresss.JS, MongoDB.</li>
+                                    <li class="workDetailsData">Created a Frontend app individually in React.JS from scratch.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experienceDetails">
+                            <div class="companyName">Biztime Solutions Pvt. Ltd.</div>
+                            <div class="designationAndWorkPeriod">
+                                <div class="designation">Trainee Intern</div>
+                                <div class="workPeriod">June 2018 – July 2018</div>
+                            </div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Part of backend team in Node.JS.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="projectsBlock" style="display: none;">
                     <div class="aboutMeHeading">
-                        about me
+                        projects
                     </div>
-                    <div class="aboutMeContent">
-                        about me
-                    </div>
-                </div>
-                <div id="educationBlock" style="display: none;">
-                    <div class="aboutMeHeading">
-                        about me
-                    </div>
-                    <div class="aboutMeContent">
-                        about me
+                    <div class="experienceContent">
+                        <div class="experienceDetails">
+                            <div class="companyName">SC-THUMBNAIL</div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Created API to upload image, resize the image and send edited image as a download.</li>
+                                    <li class="workDetailsData">Packages used are: JWT, Multer, Jimp, Morgan.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experienceDetails">
+                            <div class="companyName">FIRST-BOOK</div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Web-App to search and download free books. User can create text notes and save them.</li>
+                                    <li class="workDetailsData">Developed using Node.JS, MongoDB, Sockets.io, HTML, CSS.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experienceDetails">
+                            <div class="companyName">Second Innings Pvt. Ltd.</div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">Basic starter Web-App to create contacts, save, edit, delete them. Built using React.JS.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experienceDetails">
+                            <div class="companyName">Biztime Solutions Pvt. Ltd.</div>
+                            <div class="workSummary">
+                                <ul class="workDetails">
+                                    <li class="workDetailsData">A Game built in Java, in which user needs to match tiles to score points. MYSQL used for Database.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./index.js" type="text/javascript"></script>
   </body>
 </html>

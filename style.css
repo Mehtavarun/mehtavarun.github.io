@@ -4,12 +4,11 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    overflow: hidden;
     color: #cfd8dc;
+    background-color: #000000;
 }
 
 #root {
-    background-color: #000000;
     position: absolute;   
     min-height: 100%;
     min-width: 100%;
@@ -35,18 +34,10 @@ body {
     color: #ff5722;
 }
 
-.activeHeading {
-    font-weight: bolder;
-    transition: all 0.15s ease-in-out;
-    transform: scale(1.5);
-    -webkit-text-fill-color: #212121;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #00e676;
-}
-
 .headingsContainer {
     flex-basis: 15%;
     display: flex;
+    max-height: 90%;
     flex-direction: column-reverse;
     padding-bottom: 2rem;
 }
@@ -68,6 +59,15 @@ body {
 }
 
 .headingText:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.5);
+    -webkit-text-fill-color: #212121;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00e676;
+}
+
+.activeHeading {
+    font-weight: bolder;
     transition: all 0.15s ease-in-out;
     transform: scale(1.5);
     -webkit-text-fill-color: #212121;
@@ -91,18 +91,18 @@ body {
     flex-basis: 60%;
 }
 
-#aboutMeBlock, #skillsBlock, #experienceBlock, #projectsBlock, #educationBlock {
+#aboutMeBlock, #skillsBlock, #experienceBlock, #projectsBlock {
     margin: 1rem;
     padding: 1rem;
 }
 
-.aboutMeHeading, .skillsHeading, .experienceHeading, .projectsHeading, .educationHeading {
+.aboutMeHeading, .skillsHeading, .experienceHeading, .projectsHeading {
     font-size: 400%;
     color: #00c853;
     font-weight: bolder;
 }
 
-.aboutMeContent, .skillsContent, .experienceContent, .projectsContent, .educationContent, .informationBlock {
+.aboutMeContent, .skillsContent, .experienceContent, .projectsContent, .informationBlock {
     margin: 1rem;
     padding: 1rem;
     justify-content: center;
@@ -134,20 +134,172 @@ body {
 
 .activeInformationHeading {
     font-weight: bold;
-    color: #00e676;
+    color: #0097a7;
+    margin-top: -1rem;
+    margin-bottom: 0rem;
+    font-size: 120%;
+}
+
+.frontendSkills {
+    margin-top: 2rem;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #37474f;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 420;
+    stroke-dashoffset: 440;
+}
+
+.percent:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: 225;
+    stroke: #ff1744;
 }
 
 .skillBox {
-    margin: auto
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.percent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 }
 
 .skillNumbers {
-    padding: 2rem;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
-    font-size: 110%;
-    border-radius: 50%;
-    border: 3px solid #ff1744;
+    display: flex;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -5px;
 }
 
+.skillName {
+    position: relative;
+    margin-top: 0px;
+}
 
+.skillText { 
+    padding: 0.5rem;
+    padding-bottom: 0.3rem;
+    padding-top: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: row;
+    width: 50%;
+}
+
+.skillProgressBar {
+    position: relative;
+}
+
+.progressBar {
+    margin-left: 0.5rem;
+    border: 1px solid #00695c;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+.nodejs, .java, .mongodb, .sql, .reactjs, .angular, .html, .css {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    margin-left: 0.5rem;
+    border: 1px solid #00e676;
+    border-radius: 50px;
+}
+
+.nodejs {
+    width: 32.5%;
+}
+
+.java {
+    width: 30%;
+}
+
+.mongodb {
+    width: 25%;
+}
+
+.sql {
+    width: 30%;
+}
+
+.reactjs {
+    width: 32.5%;
+}
+
+.angular {
+    width: 22.5%;
+}
+
+.html {
+    width: 35%;
+}
+
+.css {
+    width: 25%;
+}
+
+.experienceContent {
+    max-height: 21rem;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #37474f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 10px;
+}
+
+.companyName {
+    font-weight: bolder;
+    color: #0097a7;
+    font-size: 180%;
+}
+
+.designationAndWorkPeriod {
+    color: #00e676;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+    padding-left: 0.2rem;
+}
+
+.workDetails {
+    margin-top: 0.5rem;
+}
